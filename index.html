@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AppaVPN - быстрый и безопасный VPN. Получи доступ ко всему интернету." />
+  <title>AppaVPN - Доступ ко всему интернету</title>
+  <link rel="preload" href="assets/fonts/Widock-TRIAL-Bold.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="assets/fonts/Inter-Regular.woff" as="font" type="font/woff" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo-mark.png" />
+</head>
+<body>
+  <!-- Sky background: soft photorealistic clouds -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <filter id="cloud-soft" x="-10%" y="-10%" width="120%" height="120%">
+        <feGaussianBlur stdDeviation="6"/>
+      </filter>
+      <radialGradient id="cloud-fill" cx="50%" cy="35%" r="70%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+        <stop offset="70%" stop-color="#ffffff" stop-opacity="0.92"/>
+        <stop offset="100%" stop-color="#e6eef7" stop-opacity="0.6"/>
+      </radialGradient>
+      <symbol id="cloud-a" viewBox="0 0 500 260">
+        <g filter="url(#cloud-soft)" fill="url(#cloud-fill)">
+          <ellipse cx="120" cy="170" rx="80" ry="45"/>
+          <ellipse cx="200" cy="130" rx="95" ry="65"/>
+          <ellipse cx="290" cy="115" rx="80" ry="70"/>
+          <ellipse cx="370" cy="140" rx="85" ry="55"/>
+          <ellipse cx="230" cy="185" rx="120" ry="35"/>
+          <ellipse cx="340" cy="185" rx="90" ry="30"/>
+          <ellipse cx="150" cy="195" rx="60" ry="20"/>
+        </g>
+      </symbol>
+      <symbol id="cloud-b" viewBox="0 0 500 260">
+        <g filter="url(#cloud-soft)" fill="url(#cloud-fill)">
+          <ellipse cx="110" cy="160" rx="70" ry="40"/>
+          <ellipse cx="180" cy="115" rx="85" ry="55"/>
+          <ellipse cx="270" cy="140" rx="95" ry="70"/>
+          <ellipse cx="360" cy="120" rx="70" ry="50"/>
+          <ellipse cx="410" cy="155" rx="55" ry="35"/>
+          <ellipse cx="200" cy="185" rx="140" ry="32"/>
+          <ellipse cx="360" cy="180" rx="80" ry="26"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+  <div class="sky-bg" aria-hidden="true">
+    <svg class="cloud cloud--1" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg"><use href="#cloud-a"/></svg>
+    <svg class="cloud cloud--2" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg"><use href="#cloud-b"/></svg>
+    <svg class="cloud cloud--3" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg"><use href="#cloud-a"/></svg>
+    <svg class="cloud cloud--4" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg"><use href="#cloud-b"/></svg>
+    <svg class="cloud cloud--5" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg"><use href="#cloud-a"/></svg>
+    <svg class="cloud cloud--6" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg"><use href="#cloud-b"/></svg>
+    <svg class="cloud cloud--7" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg"><use href="#cloud-a"/></svg>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="AppaVPN">
+        <img src="assets/logo.png" alt="AppaVPN" class="logo__img" />
+      </a>
+
+      <nav class="nav" aria-label="Меню">
+        <a href="#about">О нас</a>
+        <a href="#how">Как подключить</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#support">Поддержка</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://t.me/appavpn_bot?start=r_t1f4LqAzZdnd" target="_blank" rel="noopener" class="btn btn--pill btn--blue">ПОДКЛЮЧИТЬСЯ</a>
+        <button class="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero__title">
+        <span>ДОСТУП</span>
+        <span>КО ВСЕМУ</span>
+        <span>ИНТЕРНЕТУ</span>
+      </h1>
+      <p class="hero__sub">Быстрый VPN всего за 5 рублей в день. Без скрытых платежей, без логов, без границ.</p>
+      <a href="https://t.me/appavpn_bot?start=r_t1f4LqAzZdnd" target="_blank" rel="noopener" class="btn btn--hero">
+        <span>НАЧАТЬ</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- About / brand block -->
+  <section class="section section--about" id="about">
+    <div class="container about">
+      <div class="about__text">
+        <h2 class="section__title">Интернет должен быть свободным</h2>
+        <p>AppaVPN - команда, для которой приватность и скорость не роскошь, а базовое право. Мы делаем сервис, которым сами пользуемся каждый день: простой, честный и по-настоящему быстрый.</p>
+        <ul class="about__list">
+          <li><span>✓</span> Только 5 ₽ в день за устройство</li>
+          <li><span>✓</span> Не храним историю и логи</li>
+          <li><span>✓</span> Поддержка 24/7</li>
+        </ul>
+      </div>
+      <div class="about__visual">
+        <div class="orb">
+          <div class="orb__ring"></div>
+          <div class="orb__ring orb__ring--2"></div>
+          <div class="orb__core">
+            <img src="assets/logo-mark.png" alt="AppaVPN" class="orb__logo" />
+          </div>
+          <div class="dot dot--1"></div>
+          <div class="dot dot--2"></div>
+          <div class="dot dot--3"></div>
+          <div class="dot dot--4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to connect: instructions per OS -->
+  <section class="section section--dark" id="how">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <h2 class="section__title section__title--light">Как подключить VPN</h2>
+        <p class="section__lead section__lead--light">Выбери свою операционную систему - покажем пошагово.</p>
+      </div>
+
+      <div class="os-tabs" role="tablist" aria-label="Операционная система">
+        <button class="os-tab is-active" role="tab" aria-selected="true" data-os="ios">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M17.543 12.5c.023-2.482 2.03-3.673 2.121-3.729-1.16-1.697-2.964-1.929-3.605-1.954-1.531-.157-2.988.902-3.766.902-.79 0-1.98-.881-3.257-.856-1.674.025-3.223.973-4.086 2.472-1.741 3.02-.445 7.487 1.251 9.938.828 1.201 1.813 2.545 3.107 2.498 1.246-.05 1.716-.805 3.22-.805 1.5 0 1.925.805 3.245.775 1.339-.022 2.19-1.223 3.011-2.428.947-1.395 1.339-2.744 1.361-2.815-.03-.011-2.617-1.004-2.642-3.998zM15.084 5.288c.689-.835 1.152-1.996 1.026-3.148-.99.04-2.19.66-2.902 1.494-.639.741-1.199 1.921-1.047 3.056 1.103.085 2.234-.56 2.923-1.402z"/></svg>
+          iOS
+        </button>
+        <button class="os-tab" role="tab" aria-selected="false" data-os="android">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3435-4.1021-2.6892-7.5743-6.1185-9.4396"/></svg>
+          Android
+        </button>
+        <button class="os-tab" role="tab" aria-selected="false" data-os="windows">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M0 3.545L9.818 2.182v9.818H0V3.545zM10.909 2.031L24 0v11.818H10.909V2.031zM0 12.727h9.818v9.818L0 21.182v-8.455zM10.909 12.727H24V24l-13.091-2.031v-9.242z"/></svg>
+          Windows
+        </button>
+        <button class="os-tab" role="tab" aria-selected="false" data-os="macos">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M17.543 12.5c.023-2.482 2.03-3.673 2.121-3.729-1.16-1.697-2.964-1.929-3.605-1.954-1.531-.157-2.988.902-3.766.902-.79 0-1.98-.881-3.257-.856-1.674.025-3.223.973-4.086 2.472-1.741 3.02-.445 7.487 1.251 9.938.828 1.201 1.813 2.545 3.107 2.498 1.246-.05 1.716-.805 3.22-.805 1.5 0 1.925.805 3.245.775 1.339-.022 2.19-1.223 3.011-2.428.947-1.395 1.339-2.744 1.361-2.815-.03-.011-2.617-1.004-2.642-3.998zM15.084 5.288c.689-.835 1.152-1.996 1.026-3.148-.99.04-2.19.66-2.902 1.494-.639.741-1.199 1.921-1.047 3.056 1.103.085 2.234-.56 2.923-1.402z"/></svg>
+          macOS
+        </button>
+        <button class="os-tab" role="tab" aria-selected="false" data-os="linux">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.579.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 00-.088-.042c-.104-.045-.198-.064-.284-.133a1.312 1.312 0 00-.22-.128c.05-.06.146-.13.183-.202.05-.104.083-.199.087-.301v-.02a.386.386 0 00-.06-.2.145.145 0 00-.06-.058c-.04-.02-.07-.02-.11-.04a.42.42 0 00-.14-.038h-.023a.517.517 0 00-.14.038c-.049.02-.083.045-.11.083a.29.29 0 00-.06.203h.005c-.05.02-.11.05-.15.09-.05.03-.08.06-.13.09v-.107c.005-.331.16-.649.396-.878.267-.276.635-.446 1.083-.446l.16.007zm-2.593.257c.24 0 .499.089.79.267a.79.79 0 01.242.209.35.35 0 01.07.204c-.001.152-.135.28-.336.28-.176 0-.4-.09-.6-.288-.192-.19-.267-.428-.267-.617 0-.032.036-.055.101-.055h.001zm.024.089c.03 0 .075.02.09.06.02.038.05.077.05.135 0 .058-.023.117-.05.156-.05.078-.11.16-.19.219-.06.02-.15.031-.19.031-.09 0-.16-.02-.19-.061-.02-.038-.02-.077.03-.135.04-.078.11-.156.19-.194.05-.02.11-.031.15-.031h.02zm4.79 1.107c.007 0 .014 0 .022.001a.16.16 0 01.146.081c.023.037.024.079.03.108v.02c.006.148-.037.235-.088.317-.05.083-.11.144-.176.203a2.03 2.03 0 01-.352.202.816.816 0 01-.194.061c-.132.02-.19.008-.19-.048-.028-.06-.02-.128.03-.244a1.83 1.83 0 01.377-.552c.128-.109.29-.15.395-.15zm-3.99 2.335c.156.121.267.174.291.174.024 0 .036 0 .036-.017 0-.052-.089-.156-.267-.266-.024-.017-.036-.017-.036-.017-.024 0-.024 0-.024.024 0 .052.024.087.048.135z"/></svg>
+          Linux
+        </button>
+      </div>
+
+      <!-- iOS -->
+      <div class="os-panel is-active" role="tabpanel" data-os="ios">
+        <div class="steps steps--vertical">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3>Установите Happ из App Store</h3>
+            <p>Выберите версию под свой iCloud-аккаунт:</p>
+            <ul class="step__links">
+              <li>
+                <a href="https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6788279553" target="_blank" rel="noopener">
+                  <span class="badge">RU</span>
+                  Российский iCloud - Happ Proxy Utility Plus
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://apps.apple.com/us/app/happ-proxy-utility/id6504287215?l=ru" target="_blank" rel="noopener">
+                  <span class="badge">US</span>
+                  Зарубежный iCloud - Happ Proxy Utility
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3>Получите VPN-ключ в боте</h3>
+            <p>В боте добавьте устройство и получите VPN-ключ. Скопируйте его - одно нажатие на ключ, и он в буфере обмена.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3>Нажмите «+» в приложении</h3>
+            <p>Откройте Happ и нажмите на значок плюса.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <h3>Вставьте ключ из буфера обмена</h3>
+            <p>Нажмите «Вставить из буфера обмена». Ключ должен быть предварительно скопирован из бота.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">5</div>
+            <h3>Выберите регион и подключитесь</h3>
+            <p>Выберите регион и нажмите на иконку подключения. Пользуйся на здоровье!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Android -->
+      <div class="os-panel" role="tabpanel" data-os="android">
+        <div class="steps steps--vertical">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3>Скачайте приложение Happ</h3>
+            <p>Через Google Play или APK, если Play недоступен (например, на Huawei):</p>
+            <ul class="step__links">
+              <li>
+                <a href="https://play.google.com/store/apps/details?id=com.happproxy" target="_blank" rel="noopener">
+                  <span class="badge">GP</span>
+                  Google Play - Happ
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Happ-proxy/happ-android/releases/latest/download/Happ.apk" target="_blank" rel="noopener">
+                  <span class="badge">APK</span>
+                  Прямая ссылка на .apk (для Huawei)
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3>Получите VPN-ключ в боте</h3>
+            <p>В боте добавьте устройство и получите VPN-ключ. Скопируйте его - одно нажатие на ключ, и он в буфере обмена.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3>Нажмите «+» в приложении</h3>
+            <p>Откройте Happ и нажмите на значок плюса.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <h3>Вставьте ключ из буфера обмена</h3>
+            <p>Нажмите «Вставить из буфера обмена». Ключ должен быть предварительно скопирован из бота.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">5</div>
+            <h3>Выберите сервер и подключитесь</h3>
+            <p>Выберите сервер и нажмите на кнопку подключения. Пользуйся на здоровье!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Windows -->
+      <div class="os-panel" role="tabpanel" data-os="windows">
+        <div class="steps steps--vertical">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3>Скачайте Happ для Windows</h3>
+            <p>Установите приложение и запустите его:</p>
+            <ul class="step__links">
+              <li>
+                <a href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x64.exe" target="_blank" rel="noopener">
+                  <span class="badge">EXE</span>
+                  setup-Happ.x64.exe (Windows)
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3>Получите VPN-ключ в боте</h3>
+            <p>В боте добавьте устройство и получите VPN-ключ. Скопируйте его - одно нажатие на ключ, и он в буфере обмена.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3>Пропустите первое окно</h3>
+            <p>При первом запуске пропустите окошко со вставкой, нажав на «skip».</p>
+          </div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <h3>Вставьте ключ из буфера</h3>
+            <p>Перейдите на вкладку с серверами и нажмите на кнопку «Из буфера». Ключ должен быть предварительно скопирован из бота.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">5</div>
+            <h3>Выберите сервер и подключитесь</h3>
+            <p>Выберите желаемый сервер и нажмите справа на круглую кнопку подключения. Пользуйся на здоровье!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- macOS (то же, что iOS) -->
+      <div class="os-panel" role="tabpanel" data-os="macos">
+        <div class="steps steps--vertical">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3>Установите Happ из App Store</h3>
+            <p>Выберите версию под свой iCloud-аккаунт:</p>
+            <ul class="step__links">
+              <li>
+                <a href="https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6788279553" target="_blank" rel="noopener">
+                  <span class="badge">RU</span>
+                  Российский iCloud - Happ Proxy Utility Plus
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://apps.apple.com/us/app/happ-proxy-utility/id6504287215?l=ru" target="_blank" rel="noopener">
+                  <span class="badge">US</span>
+                  Зарубежный iCloud - Happ Proxy Utility
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3>Получите VPN-ключ в боте</h3>
+            <p>В боте добавьте устройство и получите VPN-ключ. Скопируйте его - одно нажатие на ключ, и он в буфере обмена.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3>Нажмите «+» в приложении</h3>
+            <p>Откройте Happ и нажмите на значок плюса.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <h3>Вставьте ключ из буфера обмена</h3>
+            <p>Нажмите «Вставить из буфера обмена». Ключ должен быть предварительно скопирован из бота.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">5</div>
+            <h3>Выберите регион и подключитесь</h3>
+            <p>Выберите регион и нажмите на иконку подключения. Пользуйся на здоровье!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linux -->
+      <div class="os-panel" role="tabpanel" data-os="linux">
+        <div class="steps steps--vertical">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3>Скачайте Happ для Linux</h3>
+            <p>Установите .deb-пакет и запустите приложение:</p>
+            <ul class="step__links">
+              <li>
+                <a href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.deb" target="_blank" rel="noopener">
+                  <span class="badge">DEB</span>
+                  Happ.linux.x64.deb
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3>Получите VPN-ключ в боте</h3>
+            <p>В боте добавьте устройство и получите VPN-ключ. Скопируйте его - одно нажатие на ключ, и он в буфере обмена.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3>Пропустите первое окно</h3>
+            <p>При первом запуске пропустите окошко со вставкой, нажав на «skip».</p>
+          </div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <h3>Вставьте ключ из буфера</h3>
+            <p>Перейдите на вкладку с серверами и нажмите на кнопку «Из буфера». Ключ должен быть предварительно скопирован из бота.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">5</div>
+            <h3>Переключитесь на Proxy и подключитесь</h3>
+            <p>Переключите режим на кнопку «Proxy», выберите сервер и нажмите справа на большую кнопку подключения. Пользуйся на здоровье!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (тексты - строго с фото) -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <h2 class="section__title">Ответы на частые вопросы</h2>
+      </div>
+
+      <div class="faq">
+        <details class="faq__item" open>
+          <summary>Стоимость VPN</summary>
+          <p>Стоимость - 5 рублей в день за устройство. Вы платите только за выбранное количество устройств, без скрытых платежей и подписок.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Вы храните данные пользователей?</summary>
+          <p>Мы не записываем, какие сайты вы открываете и что скачиваете. Не храним логи посещений. Ваши данные не будут переданы третьим лицам, банально потому, что у нас их не будет.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Сильно ли режется скорость интернета?</summary>
+          <p>Мы всегда выбираем сервера с высокой проходимостью и маленькой загруженностью. Именно поэтому, наш VPN работает в формате "Включил и забыл". Все открывается так же быстро, как и без него.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Зачем платить, если есть бесплатные VPN?</summary>
+          <p>С «бесплатниками» часто одни и те же проблемы: утечки/реклама/тормоза. Исследования находили и отсутствие шифрования. Что лучше: заплатить 5 рублей за день пользования нашим VPN или пожертвовать своими личными данными ради "бесплатного" сервиса? Мы думаем, что выбор очевиден.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Законно ли пользоваться VPN?</summary>
+          <p>Использование VPN абсолютно законно.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Я заплачу, а вас заблокируют</summary>
+          <p>Наши сервера находятся в другой стране, поэтому вы можете не переживать о том, что после оплаты сервис станет недоступен.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support / CTA -->
+  <section class="section section--cta" id="support">
+    <div class="container">
+      <div class="cta">
+        <h2>Остались вопросы?</h2>
+        <p>Если ты не нашёл ответ на свой вопрос - напиши нам в поддержку <a href="https://t.me/AppaVPN_Support" target="_blank" rel="noopener">@AppaVPN_Support</a>. Мы на связи 24 на 7!</p>
+        <div class="cta__actions">
+          <a href="https://t.me/AppaVPN_Support" target="_blank" rel="noopener" class="btn btn--pill btn--white btn--lg">Написать в поддержку</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo">
+          <img src="assets/logo.png" alt="AppaVPN" class="logo__img" />
+        </a>
+        <p>Быстрый VPN без границ. Всего 5 ₽ в день за устройство.</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h4>Продукт</h4>
+          <a href="#why">Возможности</a>
+          <a href="#how">Как подключить</a>
+        </div>
+        <div>
+          <h4>Помощь</h4>
+          <a href="#faq">FAQ</a>
+          <a href="https://t.me/AppaVPN_Support" target="_blank" rel="noopener">Поддержка</a>
+        </div>
+        <div>
+          <h4>Правовое</h4>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Условия использования</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 AppaVPN. Все права защищены.</span>
+      <div class="socials">
+        <a href="https://t.me/AppaVPN_Support" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.24 3.64 12c-.88-.25-.89-.86.2-1.3l16-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.15-3.06-2 1.94c-.23.23-.42.42-.85.42z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
